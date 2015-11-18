@@ -26,8 +26,8 @@ var Game = {
 
         this.generateLevel();
 
-        for(var i = 0; i < 10; i++) {
-            snake[i] = game.add.sprite(150 + i * squareSize, 150, 'snake');
+        for(var i = 0; i < 5; i++) {
+            snake[i] = game.add.sprite(180 + i * squareSize, 150, 'snake');
         }
 
         this.generateApple();
@@ -174,6 +174,7 @@ var Game = {
         for (var i = 0; i < snake.length; i++) {
             if(snake[i].x == apple.x && snake[i].y == apple.y) {
                 addNew = true;
+
                 apple.destroy();
                 this.generateApple();
                 score++;
